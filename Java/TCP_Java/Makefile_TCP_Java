@@ -1,0 +1,24 @@
+COMPILADOR = javac
+OPCIONES = -Xlint -cp . -d . 
+
+###############################################
+# compilación del servidor TCP en Java
+################################################
+
+ServidorTCP-Java: ./ServidorTCP_Java.java
+	$(COMPILADOR) $(OPCIONES) ./ServidorTCP_Java.java
+
+
+	
+#################################################
+# compilación del cliente TCP en Java
+#################################################
+#
+# compilación del cliente: 
+# generacion del ejecutable
+#
+ClienteTCP-Java: ./ClienteTCP_Java.java
+	$(COMPILADOR) $(OPCIONES) ./ClienteTCP_Java.java
+
+
+	

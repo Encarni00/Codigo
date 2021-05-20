@@ -1,0 +1,37 @@
+
+###############################################
+# compilación del servidor UDP en C
+################################################
+ServidorUDP-c: ServidorUDP_c.o
+	gcc -o ServidorUDP-c ServidorUDP_c.o
+	rm *.o
+
+
+# compilación del cliente: 
+# codigo objeto
+#
+ServidorUDP_c.o: ServidorUDP_c.c
+	gcc -c -o ServidorUDP_c.o ServidorUDP_c.c
+	
+	
+#################################################
+# ejecucion del cliente UDP en C
+#################################################
+#
+# compilación del cliente: 
+# generacion del ejecutable
+#
+ClienteUDP-c: ClienteUDP_c.o
+	gcc -o ClienteUDP-c ClienteUDP_c.o
+	rm *.o
+
+#
+# compilación del cliente: 
+# codigo objeto
+#
+ClienteUDP_c.o: ClienteUDP_c.c
+	gcc -c -o ClienteUDP_c.o ClienteUDP_c.c
+	
+
+	
+

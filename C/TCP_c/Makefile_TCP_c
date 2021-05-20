@@ -1,0 +1,41 @@
+
+COMPILADOR = gcc
+OPCIONES = -o 
+CODIGO_OBJETO = -c
+###############################################
+# compilación del servidor TCP en C
+################################################
+
+ServidorTCP-c: ServidorTCP_c.o
+	$(COMPILADOR) $(OPCIONES) ServidorTCP-c ServidorTCP_c.o
+	rm *.o
+
+
+# compilación del cliente: 
+# codigo objeto
+#
+ServidorTCP_c.o: ServidorTCP_c.c
+	$(COMPILADOR) $(CODIGO_OBJETO) $(OPCIONES) ServidorTCP_c.o ServidorTCP_c.c
+	
+	
+#################################################
+# compilación del cliente TCP en C
+#################################################
+#
+# compilación del cliente: 
+# generacion del ejecutable
+#
+ClienteTCP-c: ClienteTCP_c.o
+	$(COMPILADOR) $(OPCIONES) ClienteTCP-c ClienteTCP_c.o
+	rm *.o
+
+#
+# compilación del cliente: 
+# codigo objeto
+#
+ClienteTCP_c.o: ClienteTCP_c.c
+	$(COMPILADOR) $(CODIGO_OBJETO) $(OPCIONES) ClienteTCP_c.o ClienteTCP_c.c
+	
+
+	
+

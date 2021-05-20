@@ -1,0 +1,24 @@
+COMPILADOR = javac
+OPCIONES = -Xlint -cp . -d . 
+
+###############################################
+# compilación del servidor UDP en Java
+################################################
+
+ServidorUDP-Java: ./ServidorUDP_Java.java
+	$(COMPILADOR) $(OPCIONES) ./ServidorUDP_Java.java
+
+
+	
+#################################################
+# compilación del cliente UDP en Java
+#################################################
+#
+# compilación del cliente: 
+# generacion del ejecutable
+#
+ClienteUDP-Java: ./ClienteUDP_Java.java
+	$(COMPILADOR) $(OPCIONES) ./ClienteUDP_Java.java
+
+
+	
